@@ -1,0 +1,10 @@
+[package]
+name = "rush"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# rustyline gives us readline-style input: cursor movement, history, later tab completion
+rustyline = "14.0"
+# nix wraps Linux syscalls (fork, exec, waitpid, signals, pipes) in safe Rust
+nix = { version = "0.29", features = ["process", "signal", "fs"] }
